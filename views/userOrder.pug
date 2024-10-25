@@ -1,0 +1,25 @@
+html 
+    head 
+        title Order Summary
+    body 
+        include ./header
+        br
+        h3 Order Summary
+        h5  Order placed by: #{order.user}
+        h5 Order placed at: #{order.order.restaurantName}
+        
+        h5 List of ordered items:
+        each key in Object.keys(soldItems)
+            small #{soldItems[key].quantity} x #{soldItems[key].name}
+            br
+        
+        br
+        p Order Info: 
+        small Subtotal: $#{order.order.subtotal.toFixed(2)}
+        br
+        small Tax: $#{order.order.tax.toFixed(2)}
+        br
+        small Delivery Fee: $#{order.order.fee.toFixed(2)}
+        br
+        small Total: $#{order.order.total.toFixed(2)}
+        include ./footer

@@ -1,0 +1,7 @@
+#Ignore node_modeules
+node_modules/
+
+#Ignore .idea
+.idea/
+
+#Ignore specific files

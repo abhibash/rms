@@ -1,0 +1,18 @@
+html 
+    head 
+        title RMS Register 
+    body 
+        include ./header
+        br
+        div#registerResponse
+
+        br
+        p Username (Must be unique):
+            input#registerUser(type="textbox")
+        p Password: 
+            input#registerPassword(type="password")
+        button#registerBtn(type="button") Register
+        
+        include ./footer
+    script 
+        include ../clients/register-client.js

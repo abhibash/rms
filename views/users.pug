@@ -1,0 +1,11 @@
+html 
+    head 
+        title Users
+    body 
+        include ./header
+        br
+        each item in users 
+            a(href="/users/"+item._id) #{item.username}
+            br
+        
+        include ./footer

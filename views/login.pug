@@ -1,0 +1,20 @@
+html
+	head
+		title RMS Login
+	body
+		include ./header
+		div#loginResponse 
+		div#loginBar
+			p Username (Must be unique):
+				input#loginUser(type="textbox")
+			p Password:
+				input#loginPassword(type="password")
+			button#login(type="button") Login
+			br
+
+		br
+			
+		include ./footer
+
+	script
+		include ../clients/login-client.js
