@@ -1,0 +1,27 @@
+html 
+    head 
+        title User
+    body 
+        include ./header
+        br
+        h2 #{user.username}
+        if (session.loggedin)
+            if (session.userID.equals(user._id))
+                p Private Mode: 
+                input#privateMode(type="radio", name="toggle") 
+                label(for="privateMode") Private
+                br
+                input#publicMode(type="radio",name="toggle")
+                label(for="publicMode") Public
+                br
+                button#privacyToggle(type="button") Save
+
+        
+        h3 Order History 
+        each item in userOrders
+            a(href="/orders/"+item._id) #{item._id}
+            br
+        
+        include ./footer
+    script 
+        include ../clients/privacy-toggle.js

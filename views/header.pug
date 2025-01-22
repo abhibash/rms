@@ -1,0 +1,43 @@
+//- /**
+//-  * Abhi Bashyal
+//-  */
+style.
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 1%;
+		overflow: hidden;
+		background-color: #DDA0DD;
+	}
+	li{
+		float: left;
+	}
+
+	li a {
+		display: inline;
+		text-decoration: none;
+		color: 	##4B0082;
+		padding: 14px 16px;
+		text-align: center;
+	}
+
+	li a:hover{
+		background-color: #DA70D6;
+	}
+
+div#header 
+	if (session.loggedin)
+		ul
+			li 
+				a#active(href="/") Home
+				a(href="/users") Users 
+				a(href="/order") Order
+				a(href="/users/"+session.userID) Profile
+				a(href="/logout") Logout
+	else
+		ul
+			li 
+				a#active(href="/") Home
+				a(href="/users") Users 
+				a(href="/login") Login
+				a(href="/register") Register
